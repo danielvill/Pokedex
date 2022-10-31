@@ -41,5 +41,6 @@ Para lo que seria en el cambio de imagen es necesario llenar todo eso con la bas
 asi que eso ten en cuenta para que si te sale un mensaje habria que cambiar el Id para ver como empezaria esto me refiero al form 4 que en el boton puedas cambiarle
 RECUERA QUE NECESITAS LAS IMAGENES POKEDEX QUE ESTARAN AQUI EN ESTE ARCHIVO PARA QUE LAS DESCARGUES 
 
-
+#Para mas imagenes pokemon guiate en este video
+https://youtu.be/3V5rGcx6UAI
 
