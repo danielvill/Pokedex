@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PokedexModelStoreContainer" CdmEntityContainer="PokedexEntities">
+    <EntitySetMapping Name="Capturas">
+      <EntityTypeMapping TypeName="PokedexModel.Captura">
+        <MappingFragment StoreEntitySet="Capturas">
+          <ScalarProperty Name="n_pokedex" ColumnName="n_pokedex" />
+          <ScalarProperty Name="en_id" ColumnName="en_id" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categorias">
+      <EntityTypeMapping TypeName="PokedexModel.Categoria">
+        <MappingFragment StoreEntitySet="Categorias">
+          <ScalarProperty Name="ca_id" ColumnName="ca_id" />
+          <ScalarProperty Name="ca_nombre" ColumnName="ca_nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Debilidads">
+      <EntityTypeMapping TypeName="PokedexModel.Debilidad">
+        <MappingFragment StoreEntitySet="Debilidad">
+          <ScalarProperty Name="de_id" ColumnName="de_id" />
+          <ScalarProperty Name="id_tipo1" ColumnName="id_tipo1" />
+          <ScalarProperty Name="id_tipo2" ColumnName="id_tipo2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Entrenadors">
+      <EntityTypeMapping TypeName="PokedexModel.Entrenador">
+        <MappingFragment StoreEntitySet="Entrenador">
+          <ScalarProperty Name="en_id" ColumnName="en_id" />
+          <ScalarProperty Name="en_usuario" ColumnName="en_usuario" />
+          <ScalarProperty Name="en_clave" ColumnName="en_clave" />
+          <ScalarProperty Name="en_nombre" ColumnName="en_nombre" />
+          <ScalarProperty Name="en_edad" ColumnName="en_edad" />
+          <ScalarProperty Name="en_genero" ColumnName="en_genero" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Entrenador_medallas">
+      <EntityTypeMapping TypeName="PokedexModel.Entrenador_medallas">
+        <MappingFragment StoreEntitySet="Entrenador_medallas">
+          <ScalarProperty Name="en_id" ColumnName="en_id" />
+          <ScalarProperty Name="me_id" ColumnName="me_id" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Evoluciones">
+      <EntityTypeMapping TypeName="PokedexModel.Evolucione">
+        <MappingFragment StoreEntitySet="Evoluciones">
+          <ScalarProperty Name="ev_id" ColumnName="ev_id" />
+          <ScalarProperty Name="ev_codigos" ColumnName="ev_codigos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Habilidades">
+      <EntityTypeMapping TypeName="PokedexModel.Habilidade">
+        <MappingFragment StoreEntitySet="Habilidades">
+          <ScalarProperty Name="ha_id" ColumnName="ha_id" />
+          <ScalarProperty Name="ha_nombre" ColumnName="ha_nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Medallas">
+      <EntityTypeMapping TypeName="PokedexModel.Medalla">
+        <MappingFragment StoreEntitySet="Medallas">
+          <ScalarProperty Name="me_id" ColumnName="me_id" />
+          <ScalarProperty Name="me_nombre" ColumnName="me_nombre" />
+          <ScalarProperty Name="me_foto" ColumnName="me_foto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pokemons">
+      <EntityTypeMapping TypeName="PokedexModel.Pokemon">
+        <MappingFragment StoreEntitySet="Pokemon">
+          <ScalarProperty Name="n_pokedex" ColumnName="n_pokedex" />
+          <ScalarProperty Name="pk_nombre" ColumnName="pk_nombre" />
+          <ScalarProperty Name="pk_altura" ColumnName="pk_altura" />
+          <ScalarProperty Name="pk_peso" ColumnName="pk_peso" />
+          <ScalarProperty Name="pk_descripcion" ColumnName="pk_descripcion" />
+          <ScalarProperty Name="pk_foto" ColumnName="pk_foto" />
+          <ScalarProperty Name="pk_genero" ColumnName="pk_genero" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tipoes">
+      <EntityTypeMapping TypeName="PokedexModel.Tipo">
+        <MappingFragment StoreEntitySet="Tipo">
+          <ScalarProperty Name="ti_id" ColumnName="ti_id" />
+          <ScalarProperty Name="ti_nombre" ColumnName="ti_nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="Categorias_pokemon" TypeName="PokedexModel.Categorias_pokemon" StoreEntitySet="Categorias_pokemon">
+      <EndProperty Name="Categorias">
+        <ScalarProperty Name="ca_id" ColumnName="ca_id" />
+      </EndProperty>
+      <EndProperty Name="Pokemon">
+        <ScalarProperty Name="n_pokedex" ColumnName="n_pokedex" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="Habilidades_pokemon" TypeName="PokedexModel.Habilidades_pokemon" StoreEntitySet="Habilidades_pokemon">
+      <EndProperty Name="Habilidades">
+        <ScalarProperty Name="ha_id" ColumnName="ha_id" />
+      </EndProperty>
+      <EndProperty Name="Pokemon">
+        <ScalarProperty Name="n_pokedex" ColumnName="n_pokedex" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="Tipo_pokemon" TypeName="PokedexModel.Tipo_pokemon" StoreEntitySet="Tipo_pokemon">
+      <EndProperty Name="Pokemon">
+        <ScalarProperty Name="n_pokedex" ColumnName="n_pokedex" />
+      </EndProperty>
+      <EndProperty Name="Tipo">
+        <ScalarProperty Name="ti_id" ColumnName="ti_id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

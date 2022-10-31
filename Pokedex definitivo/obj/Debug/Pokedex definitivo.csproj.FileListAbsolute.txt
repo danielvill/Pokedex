@@ -1,0 +1,38 @@
+D:\Descargas D\Visual Studio\Pokedex definitivo\Pokedex definitivo\bin\Debug\Pokedex definitivo.exe.config
+D:\Descargas D\Visual Studio\Pokedex definitivo\Pokedex definitivo\bin\Debug\Pokedex definitivo.exe
+D:\Descargas D\Visual Studio\Pokedex definitivo\Pokedex definitivo\bin\Debug\Pokedex definitivo.pdb
+D:\Descargas D\Visual Studio\Pokedex definitivo\Pokedex definitivo\bin\Debug\EntityFramework.dll
+D:\Descargas D\Visual Studio\Pokedex definitivo\Pokedex definitivo\bin\Debug\EntityFramework.SqlServer.dll
+D:\Descargas D\Visual Studio\Pokedex definitivo\Pokedex definitivo\bin\Debug\EntityFramework.xml
+D:\Descargas D\Visual Studio\Pokedex definitivo\Pokedex definitivo\bin\Debug\EntityFramework.SqlServer.xml
+D:\Descargas D\Visual Studio\Pokedex definitivo\Pokedex definitivo\obj\Debug\Pokedex definitivo.csproj.AssemblyReference.cache
+D:\Descargas D\Visual Studio\Pokedex definitivo\Pokedex definitivo\obj\Debug\Pokedex definitivo.csproj.SuggestedBindingRedirects.cache
+D:\Descargas D\Visual Studio\Pokedex definitivo\Pokedex definitivo\obj\Debug\Pokedex_definitivo.Form1.resources
+D:\Descargas D\Visual Studio\Pokedex definitivo\Pokedex definitivo\obj\Debug\Pokedex_definitivo.Form2.resources
+D:\Descargas D\Visual Studio\Pokedex definitivo\Pokedex definitivo\obj\Debug\Pokedex_definitivo.Form3.resources
+D:\Descargas D\Visual Studio\Pokedex definitivo\Pokedex definitivo\obj\Debug\Pokedex_definitivo.Form4.resources
+D:\Descargas D\Visual Studio\Pokedex definitivo\Pokedex definitivo\obj\Debug\Pokedex_definitivo.Properties.Resources.resources
+D:\Descargas D\Visual Studio\Pokedex definitivo\Pokedex definitivo\obj\Debug\Pokedex definitivo.csproj.GenerateResource.cache
+D:\Descargas D\Visual Studio\Pokedex definitivo\Pokedex definitivo\obj\Debug\Pokedex definitivo.csproj.CoreCompileInputs.cache
+D:\Descargas D\Visual Studio\Pokedex definitivo\Pokedex definitivo\obj\Debug\Pokedex definitivo.csproj.CopyComplete
+D:\Descargas D\Visual Studio\Pokedex definitivo\Pokedex definitivo\obj\Debug\Pokedex definitivo.exe
+D:\Descargas D\Visual Studio\Pokedex definitivo\Pokedex definitivo\obj\Debug\Pokedex definitivo.pdb
+C:\Users\Daniel Villacres\Downloads\Pokedex definitivo\Pokedex definitivo\bin\Debug\Pokedex definitivo.exe.config
+C:\Users\Daniel Villacres\Downloads\Pokedex definitivo\Pokedex definitivo\bin\Debug\Pokedex definitivo.exe
+C:\Users\Daniel Villacres\Downloads\Pokedex definitivo\Pokedex definitivo\bin\Debug\Pokedex definitivo.pdb
+C:\Users\Daniel Villacres\Downloads\Pokedex definitivo\Pokedex definitivo\bin\Debug\EntityFramework.dll
+C:\Users\Daniel Villacres\Downloads\Pokedex definitivo\Pokedex definitivo\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Daniel Villacres\Downloads\Pokedex definitivo\Pokedex definitivo\bin\Debug\EntityFramework.xml
+C:\Users\Daniel Villacres\Downloads\Pokedex definitivo\Pokedex definitivo\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Daniel Villacres\Downloads\Pokedex definitivo\Pokedex definitivo\obj\Debug\Pokedex definitivo.csproj.AssemblyReference.cache
+C:\Users\Daniel Villacres\Downloads\Pokedex definitivo\Pokedex definitivo\obj\Debug\Pokedex definitivo.csproj.SuggestedBindingRedirects.cache
+C:\Users\Daniel Villacres\Downloads\Pokedex definitivo\Pokedex definitivo\obj\Debug\Pokedex_definitivo.Form1.resources
+C:\Users\Daniel Villacres\Downloads\Pokedex definitivo\Pokedex definitivo\obj\Debug\Pokedex_definitivo.Form2.resources
+C:\Users\Daniel Villacres\Downloads\Pokedex definitivo\Pokedex definitivo\obj\Debug\Pokedex_definitivo.Form3.resources
+C:\Users\Daniel Villacres\Downloads\Pokedex definitivo\Pokedex definitivo\obj\Debug\Pokedex_definitivo.Form4.resources
+C:\Users\Daniel Villacres\Downloads\Pokedex definitivo\Pokedex definitivo\obj\Debug\Pokedex_definitivo.Properties.Resources.resources
+C:\Users\Daniel Villacres\Downloads\Pokedex definitivo\Pokedex definitivo\obj\Debug\Pokedex definitivo.csproj.GenerateResource.cache
+C:\Users\Daniel Villacres\Downloads\Pokedex definitivo\Pokedex definitivo\obj\Debug\Pokedex definitivo.csproj.CoreCompileInputs.cache
+C:\Users\Daniel Villacres\Downloads\Pokedex definitivo\Pokedex definitivo\obj\Debug\Pokedex definitivo.csproj.CopyComplete
+C:\Users\Daniel Villacres\Downloads\Pokedex definitivo\Pokedex definitivo\obj\Debug\Pokedex definitivo.exe
+C:\Users\Daniel Villacres\Downloads\Pokedex definitivo\Pokedex definitivo\obj\Debug\Pokedex definitivo.pdb

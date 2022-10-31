@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PokedexModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Captura">
+    <Key>
+      <PropertyRef Name="n_pokedex" />
+      <PropertyRef Name="en_id" />
+    </Key>
+    <Property Name="n_pokedex" Type="Int32" Nullable="false" />
+    <Property Name="en_id" Type="Int32" Nullable="false" />
+    <Property Name="fecha" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="Entrenador" Relationship="Self.fk_entrenador_capturas" FromRole="Capturas" ToRole="Entrenador" />
+    <NavigationProperty Name="Pokemon" Relationship="Self.fk_pokemon_capturas" FromRole="Capturas" ToRole="Pokemon" />
+  </EntityType>
+  <EntityType Name="Categoria">
+    <Key>
+      <PropertyRef Name="ca_id" />
+    </Key>
+    <Property Name="ca_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ca_nombre" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Pokemons" Relationship="Self.Categorias_pokemon" FromRole="Categorias" ToRole="Pokemon" />
+  </EntityType>
+  <EntityType Name="Debilidad">
+    <Key>
+      <PropertyRef Name="de_id" />
+    </Key>
+    <Property Name="de_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_tipo1" Type="Int32" Nullable="false" />
+    <Property Name="id_tipo2" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Entrenador">
+    <Key>
+      <PropertyRef Name="en_id" />
+    </Key>
+    <Property Name="en_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="en_usuario" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="en_clave" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="en_nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="en_edad" Type="Int32" Nullable="false" />
+    <Property Name="en_genero" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Capturas" Relationship="Self.fk_entrenador_capturas" FromRole="Entrenador" ToRole="Capturas" />
+    <NavigationProperty Name="Entrenador_medallas" Relationship="Self.fk_entrenador_medallas" FromRole="Entrenador" ToRole="Entrenador_medallas" />
+  </EntityType>
+  <EntityType Name="Entrenador_medallas">
+    <Key>
+      <PropertyRef Name="en_id" />
+      <PropertyRef Name="me_id" />
+    </Key>
+    <Property Name="en_id" Type="Int32" Nullable="false" />
+    <Property Name="me_id" Type="Int32" Nullable="false" />
+    <Property Name="fecha" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="Entrenador" Relationship="Self.fk_entrenador_medallas" FromRole="Entrenador_medallas" ToRole="Entrenador" />
+    <NavigationProperty Name="Medalla" Relationship="Self.fk_medallas_entrenador" FromRole="Entrenador_medallas" ToRole="Medallas" />
+  </EntityType>
+  <EntityType Name="Evolucione">
+    <Key>
+      <PropertyRef Name="ev_id" />
+    </Key>
+    <Property Name="ev_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ev_codigos" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Habilidade">
+    <Key>
+      <PropertyRef Name="ha_id" />
+    </Key>
+    <Property Name="ha_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ha_nombre" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Pokemons" Relationship="Self.Habilidades_pokemon" FromRole="Habilidades" ToRole="Pokemon" />
+  </EntityType>
+  <EntityType Name="Medalla">
+    <Key>
+      <PropertyRef Name="me_id" />
+    </Key>
+    <Property Name="me_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="me_nombre" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="me_foto" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <NavigationProperty Name="Entrenador_medallas" Relationship="Self.fk_medallas_entrenador" FromRole="Medallas" ToRole="Entrenador_medallas" />
+  </EntityType>
+  <EntityType Name="Pokemon">
+    <Key>
+      <PropertyRef Name="n_pokedex" />
+    </Key>
+    <Property Name="n_pokedex" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="pk_nombre" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="pk_altura" Type="Double" Nullable="false" />
+    <Property Name="pk_peso" Type="Double" Nullable="false" />
+    <Property Name="pk_descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="pk_foto" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <Property Name="pk_genero" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Capturas" Relationship="Self.fk_pokemon_capturas" FromRole="Pokemon" ToRole="Capturas" />
+    <NavigationProperty Name="Categorias" Relationship="Self.Categorias_pokemon" FromRole="Pokemon" ToRole="Categorias" />
+    <NavigationProperty Name="Habilidades" Relationship="Self.Habilidades_pokemon" FromRole="Pokemon" ToRole="Habilidades" />
+    <NavigationProperty Name="Tipoes" Relationship="Self.Tipo_pokemon" FromRole="Pokemon" ToRole="Tipo" />
+  </EntityType>
+  <EntityType Name="Tipo">
+    <Key>
+      <PropertyRef Name="ti_id" />
+    </Key>
+    <Property Name="ti_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ti_nombre" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Pokemons" Relationship="Self.Tipo_pokemon" FromRole="Tipo" ToRole="Pokemon" />
+  </EntityType>
+  <Association Name="fk_entrenador_capturas">
+    <End Role="Entrenador" Type="Self.Entrenador" Multiplicity="1" />
+    <End Role="Capturas" Type="Self.Captura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Entrenador">
+        <PropertyRef Name="en_id" />
+      </Principal>
+      <Dependent Role="Capturas">
+        <PropertyRef Name="en_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_pokemon_capturas">
+    <End Role="Pokemon" Type="Self.Pokemon" Multiplicity="1" />
+    <End Role="Capturas" Type="Self.Captura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pokemon">
+        <PropertyRef Name="n_pokedex" />
+      </Principal>
+      <Dependent Role="Capturas">
+        <PropertyRef Name="n_pokedex" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_entrenador_medallas">
+    <End Role="Entrenador" Type="Self.Entrenador" Multiplicity="1" />
+    <End Role="Entrenador_medallas" Type="Self.Entrenador_medallas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Entrenador">
+        <PropertyRef Name="en_id" />
+      </Principal>
+      <Dependent Role="Entrenador_medallas">
+        <PropertyRef Name="en_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_medallas_entrenador">
+    <End Role="Medallas" Type="Self.Medalla" Multiplicity="1" />
+    <End Role="Entrenador_medallas" Type="Self.Entrenador_medallas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Medallas">
+        <PropertyRef Name="me_id" />
+      </Principal>
+      <Dependent Role="Entrenador_medallas">
+        <PropertyRef Name="me_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Categorias_pokemon">
+    <End Role="Categorias" Type="Self.Categoria" Multiplicity="*" />
+    <End Role="Pokemon" Type="Self.Pokemon" Multiplicity="*" />
+  </Association>
+  <Association Name="Habilidades_pokemon">
+    <End Role="Habilidades" Type="Self.Habilidade" Multiplicity="*" />
+    <End Role="Pokemon" Type="Self.Pokemon" Multiplicity="*" />
+  </Association>
+  <Association Name="Tipo_pokemon">
+    <End Role="Pokemon" Type="Self.Pokemon" Multiplicity="*" />
+    <End Role="Tipo" Type="Self.Tipo" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="PokedexEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Capturas" EntityType="Self.Captura" />
+    <EntitySet Name="Categorias" EntityType="Self.Categoria" />
+    <EntitySet Name="Debilidads" EntityType="Self.Debilidad" />
+    <EntitySet Name="Entrenadors" EntityType="Self.Entrenador" />
+    <EntitySet Name="Entrenador_medallas" EntityType="Self.Entrenador_medallas" />
+    <EntitySet Name="Evoluciones" EntityType="Self.Evolucione" />
+    <EntitySet Name="Habilidades" EntityType="Self.Habilidade" />
+    <EntitySet Name="Medallas" EntityType="Self.Medalla" />
+    <EntitySet Name="Pokemons" EntityType="Self.Pokemon" />
+    <EntitySet Name="Tipoes" EntityType="Self.Tipo" />
+    <AssociationSet Name="fk_entrenador_capturas" Association="Self.fk_entrenador_capturas">
+      <End Role="Entrenador" EntitySet="Entrenadors" />
+      <End Role="Capturas" EntitySet="Capturas" />
+    </AssociationSet>
+    <AssociationSet Name="fk_pokemon_capturas" Association="Self.fk_pokemon_capturas">
+      <End Role="Pokemon" EntitySet="Pokemons" />
+      <End Role="Capturas" EntitySet="Capturas" />
+    </AssociationSet>
+    <AssociationSet Name="fk_entrenador_medallas" Association="Self.fk_entrenador_medallas">
+      <End Role="Entrenador" EntitySet="Entrenadors" />
+      <End Role="Entrenador_medallas" EntitySet="Entrenador_medallas" />
+    </AssociationSet>
+    <AssociationSet Name="fk_medallas_entrenador" Association="Self.fk_medallas_entrenador">
+      <End Role="Medallas" EntitySet="Medallas" />
+      <End Role="Entrenador_medallas" EntitySet="Entrenador_medallas" />
+    </AssociationSet>
+    <AssociationSet Name="Categorias_pokemon" Association="Self.Categorias_pokemon">
+      <End Role="Categorias" EntitySet="Categorias" />
+      <End Role="Pokemon" EntitySet="Pokemons" />
+    </AssociationSet>
+    <AssociationSet Name="Habilidades_pokemon" Association="Self.Habilidades_pokemon">
+      <End Role="Habilidades" EntitySet="Habilidades" />
+      <End Role="Pokemon" EntitySet="Pokemons" />
+    </AssociationSet>
+    <AssociationSet Name="Tipo_pokemon" Association="Self.Tipo_pokemon">
+      <End Role="Pokemon" EntitySet="Pokemons" />
+      <End Role="Tipo" EntitySet="Tipoes" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
