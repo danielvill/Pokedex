@@ -32,7 +32,8 @@ Recuerda que se te grabo en el PROGRAM para que corra en el Form 4 eso lo puedes
 
 #Openfialedialog
 Habria que cambiar en OpenFiledialog la direccion que vendria hacer del escritorio para poder ejecutar del disco que uno quiera en el gestor de archivos
-Esta imagen es para que puedas cambiar si quieres que se abra directamene en el disco C o D habria que elegir cual abres
+Esta imagen es para que puedas cambiar si quieres que se abra directamene en el disco C o D habria que elegir cual abres.
+
 [![2022-10-31-15h20-13.png](https://i.postimg.cc/mg3KzhCt/2022-10-31-15h20-13.png)](https://postimg.cc/sMXTbjnr)
 
 # Otros datos
